@@ -1001,7 +1001,7 @@ player1PaperOption5.addEventListener('click', function(){
     player1Choice = '';
 
     
-    if(player2Choice === ''){
+    if(player1Choice === '' || player2Choice === ''){
 
     }else{
 
@@ -1060,7 +1060,7 @@ player1ScissorsOption5.addEventListener('click', function(){
 
     
 
-    if(player2Choice === '' && player1Choice === ' '){
+    if(player2Choice === '' && player1Choice === ''){
         
     }else{
 
@@ -1113,7 +1113,7 @@ player1LizardOption5.addEventListener('click', function(){
 
    
 
-    if(player2Choice === ''){
+    if(player1Choice === '' || player2Choice === ''){
         
     }else{
 
@@ -1167,7 +1167,7 @@ player1SpockOption5.addEventListener('click' , function(){
 
     
 
-    if(player2Choice === ''){
+    if(player1Choice === '' || player2Choice === ''){
         
     }else{
 
@@ -1226,7 +1226,7 @@ player1RockOption7.addEventListener('click', function(){
     player1Choice = '';
 
     console.log(player1Choice);
-    if(player2Choice === ''){
+    if(player1Choice === '' || player2Choice === ''){
 
     }else{
 
@@ -1277,7 +1277,7 @@ player1PaperOption7.addEventListener('click', function(){
     player1Choice = player1PaperOption7.value;
     player1Choice = '';
     
-    if(player2Choice === ''){
+    if(player1Choice === '' || player2Choice === ''){
 
     }else{
 
@@ -1334,7 +1334,7 @@ player1ScissorsOption7.addEventListener('click', function(){
     player1Choice = '';
     
 
-    if(player2Choice === ''){
+    if(player1Choice === '' || player2Choice === ''){
         
     }else{
 
@@ -1387,7 +1387,7 @@ player1LizardOption7.addEventListener('click', function(){
     player1Choice = '';
    
 
-    if(player2Choice === ''){
+    if(player1Choice === '' || player2Choice === ''){
         
     }else{
 
@@ -1439,7 +1439,7 @@ player1SpockOption7.addEventListener('click', function(){
     player1Choice = '';
     
 
-    if(player2Choice === ''){
+    if(player1Choice === '' || player2Choice === ''){
         
     }else{
 
@@ -1627,7 +1627,7 @@ pvpRockOption5.addEventListener('click', function(){
 
 
 
-    if(player1Choice === ''){
+    if(player1Choice === '' || player2Choice === ''){
         
     }else{
 
@@ -1750,7 +1750,7 @@ pvpScissorsOption5.addEventListener('click', function(){
 
     player2Choice = '';
 
-    if(player1Choice === ''){
+    if(player1Choice === '' || player2Choice === ''){
         
     }else{
         
@@ -1802,7 +1802,7 @@ pvpLizardOption5.addEventListener('click', function(){
 
     player2Choice = '';
 
-    if(player1Choice === ''){
+    if(player1Choice === '' || player2Choice === ''){
         
     }else{
         
@@ -1854,7 +1854,7 @@ pvpSpockOption5.addEventListener('click', function(){
 
     player2Choice = '';
 
-    if(player1Choice === '' ){
+    if(player1Choice === '' || player2Choice === ''){
         
     }else{
         
@@ -1911,7 +1911,7 @@ pvpRockOption7.addEventListener('click', function(){
     player2Choice = pvpRockOption7.value;
     player2Choice = '';
 
-    if(player1Choice === ''){
+    if(player1Choice === '' || player2Choice === ''){
         
     }else{
 
@@ -1962,7 +1962,7 @@ pvpPaperOption7.addEventListener('click', function(){
 
     player2Choice = '';
 
-    if(player1Choice === ''){
+    if(player1Choice === '' || player2Choice === ''){
         
     }else{
         
@@ -2013,7 +2013,7 @@ pvpScissorsOption7.addEventListener('click', function(){
 
     player2Choice = '';
 
-    if(player1Choice === ''){
+    if(player1Choice === '' || player2Choice === ''){
         
     }else{
         
@@ -2065,7 +2065,7 @@ pvpLizardOption7.addEventListener('click', function(){
 
     player2Choice = '';
 
-    if(player1Choice === ''){
+    if(player1Choice === '' || player2Choice === ''){
         
     }else{
         
@@ -2117,7 +2117,7 @@ pvpSpockOption7.addEventListener('click', function(){
 
     player2Choice = '';
 
-    if(player1Choice === ''){
+    if(player1Choice === '' || player2Choice === ''){
         
     }else{
         
