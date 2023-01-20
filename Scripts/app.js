@@ -927,7 +927,7 @@ player1SpockOption1.addEventListener('click', function () {
 
 player1RockOption5.addEventListener('click', function(){
 
-    actualResponse.textContent = '';
+    
     player1Choice = '';
     
 
@@ -959,12 +959,16 @@ player1RockOption5.addEventListener('click', function(){
         if (actualResponse.textContent === 'Player 2 wins!') {
             player2Counter++;
             round++;
+            player1Choice = '';
+            player2Choice = '';
             
             console.log(player1Choice);
         console.log(player2Choice);
         } else if (actualResponse.textContent === 'Player 1 wins!') {
             player1Counter++;
             round++;
+            player2Choice = '';
+            player1Choice = '';
           
             console.log(player1Choice);
         console.log(player2Choice);
@@ -993,6 +997,9 @@ player1RockOption5.addEventListener('click', function(){
 player1PaperOption5.addEventListener('click', function(){
     
     player1Choice = player1PaperOption5.value;
+
+    player1Choice = '';
+
     
     if(player2Choice === ''){
 
@@ -1044,6 +1051,9 @@ player1PaperOption5.addEventListener('click', function(){
 player1ScissorsOption5.addEventListener('click', function(){
 
     player1Choice = player1ScissorsOption5.value;
+
+    player1Choice = '';
+
     
 
     if(player2Choice === '' && player1Choice === ' '){
@@ -1094,6 +1104,9 @@ player1ScissorsOption5.addEventListener('click', function(){
 player1LizardOption5.addEventListener('click', function(){
 
     player1Choice = player1LizardOption5.value;
+
+    player1Choice = '';
+
    
 
     if(player2Choice === ''){
@@ -1141,6 +1154,9 @@ player1LizardOption5.addEventListener('click', function(){
 player1SpockOption5.addEventListener('click' , function(){
 
     player1Choice = player1SpockOption5.value;
+
+    player1Choice = '';
+
     
 
     if(player2Choice === ''){
@@ -1192,9 +1208,11 @@ player1SpockOption5.addEventListener('click' , function(){
 //Player 1 event Listeners Best of 7
 
 player1RockOption7.addEventListener('click', function(){
-
+    
     player1Choice = player1RockOption7.value;
     
+    player1Choice = '';
+
     console.log(player1Choice);
     if(player2Choice === ''){
 
@@ -1241,6 +1259,7 @@ player1RockOption7.addEventListener('click', function(){
 player1PaperOption7.addEventListener('click', function(){
 
     player1Choice = player1PaperOption7.value;
+    player1Choice = '';
     
     if(player2Choice === ''){
 
@@ -1291,6 +1310,8 @@ player1PaperOption7.addEventListener('click', function(){
 player1ScissorsOption7.addEventListener('click', function(){
 
     player1Choice = player1ScissorsOption7.value;
+
+    player1Choice = '';
     
 
     if(player2Choice === ''){
@@ -1338,6 +1359,8 @@ player1LizardOption7.addEventListener('click', function(){
 
 
     player1Choice = player1LizardOption7.value;
+
+    player1Choice = '';
    
 
     if(player2Choice === ''){
@@ -1385,6 +1408,7 @@ player1LizardOption7.addEventListener('click', function(){
 player1SpockOption7.addEventListener('click', function(){
     
     player1Choice = player1SpockOption7.value;
+    player1Choice = '';
     
 
     if(player2Choice === ''){
@@ -1588,9 +1612,13 @@ pvpRockOption5.addEventListener('click', function(){
 
     if (actualResponse.textContent === 'Player 2 wins!') {
         player2Counter++;
+        player2Choice = '';
+        player1Choice = '';
         
     } else if (actualResponse.textContent === 'Player 1 wins!') {
         player1Counter++;
+        player2Choice = '';
+        player1Choice = '';
          
     } else {
 
@@ -1620,7 +1648,7 @@ pvpRockOption5.addEventListener('click', function(){
 
 pvpPaperOption5.addEventListener('click', function(){
 
-    actualResponse.textContent = '';
+    
     player2Choice = '';
 
     player2Choice = pvpPaperOption5.value;
@@ -1652,15 +1680,15 @@ pvpPaperOption5.addEventListener('click', function(){
     if (actualResponse.textContent === 'Player 2 wins!') {
         player2Counter++;
         round++;
-        //player1Choice = ' ';
-        player2Choice = ' ';
+        player2Choice = '';
+        player1Choice = '';
         console.log(player1Choice);
         console.log(player2Choice);
     } else if (actualResponse.textContent === 'Player 1 wins!') {
         player1Counter++;
         round++;
-       player1Choice = ' ';
-       //player2Choice = ' ';
+       player1Choice = '';
+       player2Choice = '';
         console.log(player1Choice);
         console.log(player2Choice);
     } else {
@@ -1673,10 +1701,6 @@ pvpPaperOption5.addEventListener('click', function(){
     counterResponseText2.textContent = player1Counter;
     counterResponseText4.textContent = player2Counter;
 
-    //if(round >= player1Counter || round >= player2Counter){
-    //    counterResponseText1.textContent = ' ';
-    //    counterResponseText3.textContent = ' ';
-    //}
 
     if (player1Counter === 5) {
         actualResponse.textContent = 'Player 1 won the game!'
@@ -1693,6 +1717,8 @@ pvpPaperOption5.addEventListener('click', function(){
 
 pvpScissorsOption5.addEventListener('click', function(){
     player2Choice = pvpScissorsOption5.value;
+
+    player2Choice = '';
 
     if(player1Choice === ''){
         
@@ -1714,8 +1740,12 @@ pvpScissorsOption5.addEventListener('click', function(){
 
     if (actualResponse.textContent === 'Player 2 wins!') {
         player2Counter++;
+        player2Choice = '';
+        player1Choice = '';
     } else if (actualResponse.textContent === 'Player 1 wins!') {
         player1Counter++;
+        player2Choice = '';
+        player1Choice = '';
     } else {
 
     }
@@ -1740,6 +1770,8 @@ pvpScissorsOption5.addEventListener('click', function(){
 pvpLizardOption5.addEventListener('click', function(){
     player2Choice = pvpLizardOption5.value;
 
+    player2Choice = '';
+
     if(player1Choice === ''){
         
     }else{
@@ -1760,8 +1792,12 @@ pvpLizardOption5.addEventListener('click', function(){
 
     if (actualResponse.textContent === 'Player 2 wins!') {
         player2Counter++;
+        player2Choice = '';
+        player1Choice = '';
     } else if (actualResponse.textContent === 'Player 1 wins!') {
         player1Counter++;
+        player2Choice = '';
+        player1Choice = '';
     } else {
 
     }
@@ -1786,7 +1822,9 @@ pvpLizardOption5.addEventListener('click', function(){
 pvpSpockOption5.addEventListener('click', function(){
     player2Choice = pvpSpockOption5.value;
 
-    if(player1Choice === ''){
+    player2Choice = '';
+
+    if(player1Choice === '' ){
         
     }else{
         
@@ -1807,8 +1845,12 @@ pvpSpockOption5.addEventListener('click', function(){
 
     if (actualResponse.textContent === 'Player 2 wins!') {
         player2Counter++;
+        player2Choice = '';
+        player1Choice = '';
     } else if (actualResponse.textContent === 'Player 1 wins!') {
         player1Counter++;
+        player2Choice = '';
+        player1Choice = '';
     } else {
 
     }
@@ -1837,6 +1879,7 @@ pvpSpockOption5.addEventListener('click', function(){
 pvpRockOption7.addEventListener('click', function(){
 
     player2Choice = pvpRockOption7.value;
+    player2Choice = '';
 
     if(player1Choice === ''){
         
@@ -1858,8 +1901,12 @@ pvpRockOption7.addEventListener('click', function(){
 
     if (actualResponse.textContent === 'Player 2 wins!') {
         player2Counter++;
+        player2Choice = '';
+        player1Choice = '';
     } else if (actualResponse.textContent === 'Player 1 wins!') {
         player1Counter++;
+        player2Choice = '';
+        player1Choice = '';
     } else {
 
     }
@@ -1883,6 +1930,8 @@ pvpPaperOption7.addEventListener('click', function(){
 
     player2Choice = pvpPaperOption7.value;
 
+    player2Choice = '';
+
     if(player1Choice === ''){
         
     }else{
@@ -1903,8 +1952,12 @@ pvpPaperOption7.addEventListener('click', function(){
 
     if (actualResponse.textContent === 'Player 2 wins!') {
         player2Counter++;
+        player2Choice = '';
+        player1Choice = '';
     } else if (actualResponse.textContent === 'Player 1 wins!') {
         player1Counter++;
+        player2Choice = '';
+        player1Choice = '';
     } else {
 
     }
@@ -1928,6 +1981,8 @@ pvpScissorsOption7.addEventListener('click', function(){
 
     player2Choice = pvpScissorsOption7.value;
 
+    player2Choice = '';
+
     if(player1Choice === ''){
         
     }else{
@@ -1948,8 +2003,12 @@ pvpScissorsOption7.addEventListener('click', function(){
 
     if (actualResponse.textContent === 'Player 2 wins!') {
         player2Counter++;
+        player2Choice = '';
+        player1Choice = '';
     } else if (actualResponse.textContent === 'Player 1 wins!') {
         player1Counter++;
+        player2Choice = '';
+        player1Choice = '';
     } else {
 
     }
@@ -1973,6 +2032,9 @@ pvpScissorsOption7.addEventListener('click', function(){
 pvpLizardOption7.addEventListener('click', function(){
     player2Choice = pvpLizardOption7.value;
 
+
+    player2Choice = '';
+
     if(player1Choice === ''){
         
     }else{
@@ -1993,8 +2055,12 @@ pvpLizardOption7.addEventListener('click', function(){
 
     if (actualResponse.textContent === 'Player 2 wins!') {
         player2Counter++;
+        player2Choice = '';
+        player1Choice = '';
     } else if (actualResponse.textContent === 'Player 1 wins!') {
         player1Counter++;
+        player2Choice = '';
+        player1Choice = '';
     } else {
 
     }
@@ -2019,6 +2085,8 @@ pvpSpockOption7.addEventListener('click', function(){
 
     player2Choice = pvpSpockOption7.value;
 
+    player2Choice = '';
+
     if(player1Choice === ''){
         
     }else{
@@ -2040,8 +2108,12 @@ pvpSpockOption7.addEventListener('click', function(){
 
     if (actualResponse.textContent === 'Player 2 wins!') {
         player2Counter++;
+        player2Choice = '';
+        player1Choice = '';
     } else if (actualResponse.textContent === 'Player 1 wins!') {
         player1Counter++;
+        player2Choice = '';
+        player1Choice = '';
     } else {
 
     }

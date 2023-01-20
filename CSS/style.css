@@ -45,8 +45,9 @@
 }
 
 .alignLeft{
-    display:flex;
-    justify-content: left;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 60px;
 }
 
 .alignRight{
@@ -71,4 +72,9 @@
 
 .paddingBottom{
     padding-bottom: 200px;
+}
+
+.leftAlignment{
+    display: flex;
+    justify-content: flex-start;
 }
