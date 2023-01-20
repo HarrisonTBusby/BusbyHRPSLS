@@ -19,6 +19,8 @@ let counterResponseText3 = document.getElementById('counterResponseText3');
 let counterResponse3 = document.getElementById('counterResponse3');
 let counterResponse4 = document.getElementById('counterResponse4');
 let counterResponseText4 = document.getElementById('counterResponseText4');
+let rulesBtn = document.getElementById('rulesBtn');
+
 
 //counter
 
@@ -160,6 +162,10 @@ homeButton.addEventListener('click', function () {
     window.location.reload();
 
 
+})
+
+rulesBtn.addEventListener('click', function(){
+    alert('ROCK beats SCISSORS & LIZARD\nPAPER beats ROCK & SPOCK\nSCISSORS beats PAPER & LIZARD\nLIZARD beats PAPER & SPOCK\nSPOCK beats ROCK & SCISSORS');
 })
 
 round1Btn.addEventListener('click', function () {
