@@ -310,10 +310,10 @@ PvpBtn3.addEventListener('click', function () {
         PvpBtn2Div.classList.add('hide');
         PvpBtn3Div.classList.add('hide');
         round1BtnDiv.classList.add('hide');
-        player1Options7.classList.remove('hide');
-        player1OptionsDropdown7.classList.remove('hide');
-        player2Options7.classList.remove('hide');
-        player2OptionsDropdown7.classList.remove('hide');
+        player1Options5.classList.remove('hide');
+        player1OptionsDropdown5.classList.remove('hide');
+        player2Options5.classList.remove('hide');
+        player2OptionsDropdown5.classList.remove('hide');
         actualResponse.classList.remove('hide');
         winningResponse.classList.remove('hide');
         homeButton.classList.remove('hide');
@@ -1024,8 +1024,12 @@ player1PaperOption5.addEventListener('click', function(){
 
         if (actualResponse.textContent === 'Player 2 wins!') {
             player2Counter++;
+            player1Choice = '';
+            player2Choice = '';
         } else if (actualResponse.textContent === 'Player 1 wins!') {
             player1Counter++;
+            player1Choice = '';
+            player2Choice = '';
         } else {
     
         }
@@ -1129,8 +1133,12 @@ player1LizardOption5.addEventListener('click', function(){
 
     if (actualResponse.textContent === 'Player 2 wins!') {
         player2Counter++;
+        player1Choice = '';
+            player2Choice = '';
     } else if (actualResponse.textContent === 'Player 1 wins!') {
         player1Counter++;
+        player1Choice = '';
+            player2Choice = '';
     } else {
 
     }
@@ -1180,8 +1188,12 @@ player1SpockOption5.addEventListener('click' , function(){
 
     if (actualResponse.textContent === 'Player 2 wins!') {
         player2Counter++;
+        player1Choice = '';
+            player2Choice = '';
     } else if (actualResponse.textContent === 'Player 1 wins!') {
         player1Counter++;
+        player1Choice = '';
+            player2Choice = '';
     } else {
 
     }
@@ -1235,8 +1247,12 @@ player1RockOption7.addEventListener('click', function(){
 
         if (actualResponse.textContent === 'Player 2 wins!') {
             player2Counter++;
+            player1Choice = '';
+            player2Choice = '';
         } else if (actualResponse.textContent === 'Player 1 wins!') {
             player1Counter++;
+            player1Choice = '';
+            player2Choice = '';
         } else {
     
         }
@@ -1284,8 +1300,12 @@ player1PaperOption7.addEventListener('click', function(){
 
         if (actualResponse.textContent === 'Player 2 wins!') {
             player2Counter++;
+            player1Choice = '';
+            player2Choice = '';
         } else if (actualResponse.textContent === 'Player 1 wins!') {
             player1Counter++;
+            player1Choice = '';
+            player2Choice = '';
         } else {
     
         }
@@ -1334,8 +1354,12 @@ player1ScissorsOption7.addEventListener('click', function(){
 
     if (actualResponse.textContent === 'Player 2 wins!') {
         player2Counter++;
+        player1Choice = '';
+            player2Choice = '';
     } else if (actualResponse.textContent === 'Player 1 wins!') {
         player1Counter++;
+        player1Choice = '';
+            player2Choice = '';
     } else {
 
     }
@@ -1383,8 +1407,12 @@ player1LizardOption7.addEventListener('click', function(){
 
     if (actualResponse.textContent === 'Player 2 wins!') {
         player2Counter++;
+        player1Choice = '';
+            player2Choice = '';
     } else if (actualResponse.textContent === 'Player 1 wins!') {
         player1Counter++;
+        player1Choice = '';
+            player2Choice = '';
     } else {
 
     }
@@ -1432,8 +1460,12 @@ player1SpockOption7.addEventListener('click', function(){
 
     if (actualResponse.textContent === 'Player 2 wins!') {
         player2Counter++;
+        player1Choice = '';
+            player2Choice = '';
     } else if (actualResponse.textContent === 'Player 1 wins!') {
         player1Counter++;
+        player1Choice = '';
+            player2Choice = '';
     } else {
 
     }
@@ -1588,9 +1620,12 @@ pvpSpockOption.addEventListener('click', function () {
 //Player 2 Options Best of 5
 
 pvpRockOption5.addEventListener('click', function(){
-    round = 1;
     
+    player2Choice = '';
+
     player2Choice = pvpRockOption5.value;
+
+
 
     if(player1Choice === ''){
         
@@ -1626,11 +1661,6 @@ pvpRockOption5.addEventListener('click', function(){
 
     counterResponseText2.textContent = player1Counter;
     counterResponseText4.textContent = player2Counter;
-
-    if(round > player1Counter || round > player2Counter){
-        player1Choice.textContent = ' ';
-        player2Choice.textContent = ' ';
-    }
 
     if (player1Counter === 5) {
         actualResponse.textContent = 'Player 1 won the game!'
