@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>BusbyHRPSLS</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="icon" type="image/x-icon" href="./Assets/Bazinga.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body id="backgroundImg" class="backgroundImg1">
+
+
+    <div class="alignRight"><button id="homeButton" class="boxBackground1 hide">
+            <h1>Home</h1>
+        </button></div>
+
+
+    <div id="gameMode1" class="container mt-5 paddingBottom">
+        <div class="row ">
+            <p class="boxBackground1 text-center mt-5">Rock, Paper, Scissors, Lizard, Spock</p>
+        </div>
+
+        <!-- These are the buttons -->
+        <div class="row mt-5 alignCenter">
+            <div class="col alignCenter">
+
+                <div id="round1BtnDiv"><button id="round1Btn" type="button" class="btn hide">
+                        <h4 class="boxBackground1">Best of 1 VS CPU</h4>
+                    </button></div>
+                <div id='options1' class="dropdown boxBackground1 hide">
+                    <button class="btn btn-secondary dropdown-toggle boxBackground1" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Pick your Poison
+                    </button>
+                    <ul class="dropdown-menu boxBackground1">
+                        <li><button id="rockOption" class="dropdown-item">Rock</button></li>
+                        <li><button id="paperOption" class="dropdown-item">Paper</button></li>
+                        <li><button id="scissorsOption" class="dropdown-item">Scissors</button></li>
+                        <li><button id="lizardOption" class="dropdown-item">Lizard</button></li>
+                        <li><button id="spockOption" class="dropdown-item">Spock</button></li>
+                    </ul>
+                </div>
+
+                <!-- Best of 5 Options -->
+
+                <div id='options2' class="dropdown boxBackground1 hide">
+                    <button class="btn btn-secondary dropdown-toggle boxBackground1" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Pick your Poison
+                    </button>
+                    <ul class="dropdown-menu boxBackground1">
+                        <li><button id="rockOption5" class="dropdown-item">Rock</button></li>
+                        <li><button id="paperOption5" class="dropdown-item">Paper</button></li>
+                        <li><button id="scissorsOption5" class="dropdown-item">Scissors</button></li>
+                        <li><button id="lizardOption5" class="dropdown-item">Lizard</button></li>
+                        <li><button id="spockOption5" class="dropdown-item">Spock</button></li>
+                    </ul>
+                </div>
+
+                <!-- Best of 7 Options -->
+
+                <div id='options3' class="dropdown boxBackground1 hide">
+                    <button class="btn btn-secondary dropdown-toggle boxBackground1" type="button"
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                        Pick your Poison
+                    </button>
+                    <ul class="dropdown-menu boxBackground1">
+                        <li><button id="rockOption7" class="dropdown-item">Rock</button></li>
+                        <li><button id="paperOption7" class="dropdown-item">Paper</button></li>
+                        <li><button id="scissorsOption7" class="dropdown-item">Scissors</button></li>
+                        <li><button id="lizardOption7" class="dropdown-item">Lizard</button></li>
+                        <li><button id="spockOption7" class="dropdown-item">Spock</button></li>
+                    </ul>
+                </div>
+
+                <!-- Player1 Options for Pvp -->
+                <div id='player1Options1' class=" alignCenter hide">
+                    <div id="player1OptionsDropdown1" class="dropdown boxBackground1 hide">
+                        <button class="btn btn-secondary dropdown-toggle boxBackground1" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Pick your Poison
+                        </button>
+                        <ul class="dropdown-menu boxBackground1">
+                            <li><button id="player1RockOption1" class="dropdown-item" value="rock">Rock</button></li>
+                            <li><button id="player1PaperOption1" class="dropdown-item" value="paper">Paper</button></li>
+                            <li><button id="player1ScissorsOption1" class="dropdown-item" value="scissors">Scissors</button></li>
+                            <li><button id="player1LizardOption1" class="dropdown-item" value="lizard">Lizard</button></li>
+                            <li><button id="player1SpockOption1" class="dropdown-item" value="spock">Spock</button></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Best of 5 Player1 Options for pvp -->
+
+                <div id='player1Options5' class=" alignCenter hide">
+                    <div id="player1OptionsDropdown5" class="dropdown boxBackground1 hide">
+                        <button class="btn btn-secondary dropdown-toggle boxBackground1" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Pick your Poison
+                        </button>
+                        <ul class="dropdown-menu boxBackground1">
+                            <li><button id="player1RockOption5" class="dropdown-item" value="rock">Rock</button></li>
+                            <li><button id="player1PaperOption5" class="dropdown-item" value="paper">Paper</button></li>
+                            <li><button id="player1ScissorsOption5" class="dropdown-item" value="scissors">Scissors</button></li>
+                            <li><button id="player1LizardOption5" class="dropdown-item" value="lizard">Lizard</button></li>
+                            <li><button id="player1SpockOption5" class="dropdown-item" value="spock">Spock</button></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Best of 7 Player 1 Options for Pvp -->
+                
+                <div id='player1Options7' class=" alignCenter hide">
+                    <div id="player1OptionsDropdown7" class="dropdown boxBackground1 hide">
+                        <button class="btn btn-secondary dropdown-toggle boxBackground1" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Pick your Poison
+                        </button>
+                        <ul class="dropdown-menu boxBackground1">
+                            <li><button id="player1RockOption7" class="dropdown-item" value="rock">Rock</button></li>
+                            <li><button id="player1PaperOption7" class="dropdown-item" value="paper">Paper</button></li>
+                            <li><button id="player1ScissorsOption7" class="dropdown-item" value="scissors">Scissors</button></li>
+                            <li><button id="player1LizardOption7" class="dropdown-item" value="lizard">Lizard</button></li>
+                            <li><button id="player1SpockOption7" class="dropdown-item" value="spock">Spock</button></li>
+                        </ul>
+                    </div>
+                </div>
+
+
+
+
+
+
+
+
+
+                </div>
+
+                <!-- 2 Player 1 round -->
+
+                <div id='PvpBtnDiv' class="col alignCenter">
+                    <button id="PvpBtn" type="button" class="btn alignCenter boxBackground1 hide">
+                        <h4 class="boxBackground1">2 Player - Best of 1</h4>
+                    </button>
+                </div>
+
+                <!-- Inject here Text -->
+
+                <div id="injectHere" class="col boxBackground1 text-center hide">
+                    <div id='injectHereText' class="whiteFont hide"></div>
+                </div>
+                <div id="injectHere2" class="col boxBackground1 text-center hide">
+                    <div id='injectHereText2' class="whiteFont hide"></div>
+                </div>
+
+                <!-- Best of 1 round PVP player 2 -->
+
+                <div id='player2Options1' class="col alignCenter hide">
+                    <div id="player2OptionsDropdown1" class="dropdown boxBackground1 hide">
+                        <button class="btn btn-secondary dropdown-toggle boxBackground1" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Pick your Poison
+                        </button>
+                        <ul class="dropdown-menu boxBackground1">
+                            <li><button id="pvpRockOption" class="dropdown-item" value="rock">Rock</button></li>
+                            <li><button id="pvpPaperOption" class="dropdown-item" value="paper">Paper</button></li>
+                            <li><button id="pvpScissorsOption" class="dropdown-item" value='scissors'>Scissors</button></li>
+                            <li><button id="pvpLizardOption" class="dropdown-item" value="lizard">Lizard</button></li>
+                            <li><button id="pvpSpockOption" class="dropdown-item" value="spock">Spock</button></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Best of 5 rounds Pvp player 2 -->
+
+                <div id='player2Options5' class="col alignCenter hide">
+                    <div id="player2OptionsDropdown5" class="dropdown boxBackground1 hide">
+                        <button class="btn btn-secondary dropdown-toggle boxBackground1" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Pick your Poison
+                        </button>
+                        <ul class="dropdown-menu boxBackground1">
+                            <li><button id="pvpRockOption5" class="dropdown-item" value="rock">Rock</button></li>
+                            <li><button id="pvpPaperOption5" class="dropdown-item" value="paper">Paper</button></li>
+                            <li><button id="pvpScissorsOption5" class="dropdown-item" value='scissors'>Scissors</button></li>
+                            <li><button id="pvpLizardOption5" class="dropdown-item" value="lizard">Lizard</button></li>
+                            <li><button id="pvpSpockOption5" class="dropdown-item" value="spock">Spock</button></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Best of 7 rounds Pvp player 2 -->
+
+                <div id='player2Options7' class="col alignCenter hide">
+                    <div id="player2OptionsDropdown7" class="dropdown boxBackground1 hide">
+                        <button class="btn btn-secondary dropdown-toggle boxBackground1" type="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            Pick your Poison
+                        </button>
+                        <ul class="dropdown-menu boxBackground1">
+                            <li><button id="pvpRockOption7" class="dropdown-item" value="rock">Rock</button></li>
+                            <li><button id="pvpPaperOption7" class="dropdown-item" value="paper">Paper</button></li>
+                            <li><button id="pvpScissorsOption7" class="dropdown-item" value='scissors'>Scissors</button></li>
+                            <li><button id="pvpLizardOption7" class="dropdown-item" value="lizard">Lizard</button></li>
+                            <li><button id="pvpSpockOption7" class="dropdown-item" value="spock">Spock</button></li>
+                        </ul>
+                    </div>
+                </div>
+
+           
+
+
+            <!-- Best of 5 vs CPU -->
+            <div class="row text-center alignCenter">
+                <div id="bestOf5BtnDiv" class="col-6 ">
+                    <button id='bestOf5Btn' type="button" class="btn">
+                        <h4 class="boxBackground1">Best of 5 VS CPU</h4>
+                    </button>
+
+
+                </div>
+                <div id="PvpBtn2Div" class="col-6 alignCenter">
+                    <button id="PvpBtn2" type="button" class="btn hide">
+                        <h4 class="boxBackground1">2 Player - Best of 5</h4>
+                    </button>
+                </div>
+            </div>
+            <div class="row">
+                <div id="bestOf7BtnDiv" class="col alignCenter">
+
+                    <button id="bestOf7Btn" type="button" class="btn hide">
+                        <h4 class="boxBackground1">Best of 7 VS CPU</h4>
+                    </button>
+
+
+                </div>
+                <div id='PvpBtn3Div' class="col alignCenter">
+                    <button id="PvpBtn3" type="button" class="btn hide">
+                        <h4 class="boxBackground1">2 Player - Best of 7</h4>
+                    </button>
+                </div>
+
+
+            </div>
+
+            <div class="row">
+
+                <!-- Winning Responses -->
+                <div id="winningResponse" class="col-12 boxBackground2 hide mt-5">
+                    <div id="actualResponse" class="hide text-center">Test your might!</div>
+                    <div id="actualResponse2" class="hide text-center">Test your might!</div>
+                    <div id="actualResponse3" class="hide text-center">Test your might!</div>
+
+                </div>
+
+                <!-- Counter Responses -->
+                <div class="row">
+
+                    <div id="counterResponse1" class="col hide boxBackground2">
+                        <div id="counterResponseText1" class="hide alignCenter"></div>
+                    </div>
+                    <div id="counterResponse2" class="col hide boxBackground2">
+                        <div id="counterResponseText2" class="hide alignCenter"></div>
+                    </div>
+                    <div id="counterResponse3" class="col hide boxBackground2">
+                        <div id="counterResponseText3" class="hide alignCenter"></div>
+                    </div>
+                    <div id="counterResponse4" class="col hide boxBackground2">
+                        <div id="counterResponseText4" class="hide alignCenter"></div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        </div>
+
+
+
+
+
+        <script src="./Scripts/app.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+            crossorigin="anonymous"></script>
+</body>
+
+</html>

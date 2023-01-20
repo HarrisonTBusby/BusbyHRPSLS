@@ -1,0 +1,74 @@
+.backgroundImg1{
+    background-image: url(../Assets/Bazinga.png);
+    background-size: cover;
+}
+
+.backgroundImg2{
+    background-image: url(../Assets/Staredown.jpg);
+    background-size: cover;
+}
+
+.boxBackground1{
+    background-color: rgba(0, 0, 0, .6);
+    color: #FFFF;
+    font-size: 30px;
+    
+    padding: 30px;
+    border-radius: 20px;
+}
+
+.boxBackground2{
+    background-color: rgba(0, 0, 0, .6);
+    color: white;
+    font-size: 30px;
+    padding: 30px;
+    border-radius: 20px;
+    width: 220px;
+    height: 106px;
+}
+
+.whiteFont{
+    color: #FFFF;
+}
+.btnBackground1{
+    background-color: black;
+    color: #FFFF;
+    font-size: 30px;
+}
+
+.btnBackground2{
+    background-color: black;
+    color: #FFFF;
+    font-size: 30px;
+    display: flex;
+    justify-content: right;
+}
+
+.alignLeft{
+    display:flex;
+    justify-content: left;
+}
+
+.alignRight{
+    display: flex;
+    justify-content: right;
+    padding-right: 60px;
+}
+
+.alignCenter{
+    display: flex;
+    justify-content: center;
+}
+
+.bigPadding{
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.hide{
+    display: none;
+}
+
+.paddingBottom{
+    padding-bottom: 200px;
+}
