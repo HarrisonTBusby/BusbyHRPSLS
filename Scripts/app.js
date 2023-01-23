@@ -20,6 +20,8 @@ let counterResponse3 = document.getElementById('counterResponse3');
 let counterResponse4 = document.getElementById('counterResponse4');
 let counterResponseText4 = document.getElementById('counterResponseText4');
 let rulesBtn = document.getElementById('rulesBtn');
+let player1Text = document.getElementById('player1Text');
+let player2Text = document.getElementById('player2Text');
 
 
 //counter
@@ -129,6 +131,7 @@ let PvpBtnDiv = document.getElementById('PvpBtnDiv');
 let bestOf7Btn = document.getElementById('bestOf7Btn');
 let bestOf7BtnDiv = document.getElementById('bestOf7BtnDiv');
 let homeButton = document.getElementById('homeButton');
+let homeButton2 = document.getElementById('homeButton2');
 let resetButton = document.getElementById('resetButton');
 let pageButton1 = document.getElementById('pageButton1');
 let pageButton2 = document.getElementById('pageButton2');
@@ -164,7 +167,32 @@ homeButton.addEventListener('click', function () {
 
 })
 
-rulesBtn.addEventListener('click', function(){
+homeButton2.addEventListener('click', function () {
+    if (booleanTrue) {
+        backgroundImg.className = 'backgroundImg1';
+        bestOf5BtnDiv.classList.remove('hide');
+        bestOf7BtnDiv.classList.remove('hide');
+        PvpBtnDiv.classList.remove('hide');
+        round1BtnDiv.classList.remove('hide');
+        options1.classList.add('hide');
+        options2.classList.add('hide');
+        options3.classList.add('hide');
+        injectHere.classList.add('hide');
+        winningResponse.classList.add('hide');
+        PvpBtn2Div.classList.remove('hide');
+        PvpBtn3Div.classList.remove('hide');
+
+
+
+    } else {
+        backgroundImg.className = 'backgroundImg2';
+    }
+    window.location.reload();
+
+
+})
+
+rulesBtn.addEventListener('click', function () {
     alert('ROCK beats SCISSORS & LIZARD\nPAPER beats ROCK & SPOCK\nSCISSORS beats PAPER & LIZARD\nLIZARD beats PAPER & SPOCK\nSPOCK beats ROCK & SCISSORS');
 })
 
@@ -271,7 +299,8 @@ PvpBtn.addEventListener('click', function () {
         counterResponse2.classList.remove('hide');
         counterResponseText1.classList.remove('hide');
         counterResponseText2.classList.remove('hide');
-
+        player1Text.classList.remove('hide');
+        player2Text.classList.remove('hide');
     } else {
         backgroundImg.className = 'backgroundImg1';
     }
@@ -302,6 +331,8 @@ PvpBtn2.addEventListener('click', function () {
         counterResponseText2.classList.remove('hide');
         counterResponseText3.classList.remove('hide');
         counterResponseText4.classList.remove('hide');
+        player1Text.classList.remove('hide');
+        player2Text.classList.remove('hide');
     } else {
         backgroundImg.className = 'backgroundImg1';
     }
@@ -331,6 +362,8 @@ PvpBtn3.addEventListener('click', function () {
         counterResponseText2.classList.remove('hide');
         counterResponseText3.classList.remove('hide');
         counterResponseText4.classList.remove('hide');
+        player1Text.classList.remove('hide');
+        player2Text.classList.remove('hide');
     } else {
         backgroundImg.className = 'backgroundImg1';
     }
@@ -343,10 +376,19 @@ rockOption.addEventListener('click', function () {
 
     if (dataGet === 'Paper' || dataGet === 'Spock') {
         actualResponse.textContent = 'Cpu wins!';
+        homeButton2.classList.remove('hide');
+        options1.classList.add('hide');
+        injectHere.classList.add('hide');
     } else if (dataGet === 'Rock') {
         actualResponse.textContent = 'You tied';
+        homeButton2.classList.remove('hide');
+        options1.classList.add('hide');
+        injectHere.classList.add('hide');
     } else {
         actualResponse.textContent = 'You win!'
+        homeButton2.classList.remove('hide');
+        options1.classList.add('hide');
+        injectHere.classList.add('hide');
     }
     injectHereText.textContent = dataGet;
     getData();
@@ -361,10 +403,19 @@ paperOption.addEventListener('click', function () {
 
     if (dataGet === 'Scissors' || dataGet === 'Lizard') {
         actualResponse.textContent = 'Cpu wins!';
+        homeButton2.classList.remove('hide');
+        options1.classList.add('hide');
+        injectHere.classList.add('hide');
     } else if (dataGet === 'Paper') {
         actualResponse.textContent = 'You tied';
+        homeButton2.classList.remove('hide');
+        options1.classList.add('hide');
+        injectHere.classList.add('hide');
     } else {
         actualResponse.textContent = 'You win!'
+        homeButton2.classList.remove('hide');
+        options1.classList.add('hide');
+        injectHere.classList.add('hide');
     }
     injectHereText.textContent = dataGet;
     getData();
@@ -374,10 +425,19 @@ scissorsOption.addEventListener('click', function () {
 
     if (dataGet === 'Rock' || dataGet === 'Spock') {
         actualResponse.textContent = 'Cpu wins!';
+        homeButton2.classList.remove('hide');
+        options1.classList.add('hide');
+        injectHere.classList.add('hide');
     } else if (dataGet === 'Scissors') {
         actualResponse.textContent = 'You tied';
+        homeButton2.classList.remove('hide');
+        options1.classList.add('hide');
+        injectHere.classList.add('hide');
     } else {
         actualResponse.textContent = 'You win!'
+        homeButton2.classList.remove('hide');
+        options1.classList.add('hide');
+        injectHere.classList.add('hide');
     }
     injectHereText.textContent = dataGet;
     getData();
@@ -388,10 +448,19 @@ lizardOption.addEventListener('click', function () {
 
     if (dataGet === 'Rock' || dataGet === 'Scissors') {
         actualResponse.textContent = 'Cpu wins!';
+        homeButton2.classList.remove('hide');
+        options1.classList.add('hide');
+        injectHere.classList.add('hide');
     } else if (dataGet === 'Lizard') {
         actualResponse.textContent = 'You tied';
+        homeButton2.classList.remove('hide');
+        options1.classList.add('hide');
+        injectHere.classList.add('hide');
     } else {
         actualResponse.textContent = 'You win!'
+        homeButton2.classList.remove('hide');
+        options1.classList.add('hide');
+        injectHere.classList.add('hide');
     }
     injectHereText.textContent = dataGet;
 
@@ -402,10 +471,19 @@ spockOption.addEventListener('click', function () {
 
     if (dataGet === 'Lizard' || dataGet === 'Paper') {
         actualResponse.textContent = 'Cpu wins!';
+        homeButton2.classList.remove('hide');
+        options1.classList.add('hide');
+        injectHere.classList.add('hide');
     } else if (dataGet === 'Spock') {
         actualResponse.textContent = 'You tied';
+        homeButton2.classList.remove('hide');
+        options1.classList.add('hide');
+        injectHere.classList.add('hide');
     } else {
         actualResponse.textContent = 'You win!'
+        homeButton2.classList.remove('hide');
+        options1.classList.add('hide');
+        injectHere.classList.add('hide');
     }
     injectHereText.textContent = dataGet;
     getData();
@@ -440,11 +518,11 @@ rockOption5.addEventListener('click', function () {
     if (actualResponse2.textContent === 'Cpu wins!') {
         cpuCounter++;
         console.log(cpuCounter)
-         
+
     }
     if (actualResponse2.textContent === 'You win!') {
         player1Counter++;
-        
+
 
     }
 
@@ -456,10 +534,16 @@ rockOption5.addEventListener('click', function () {
 
     if (player1Counter === 3) {
         actualResponse2.textContent = 'You won the game!'
+        homeButton2.classList.remove('hide');
+        options2.classList.add('hide');
+        injectHere2.classList.add('hide');
     }
 
     if (cpuCounter === 3) {
         actualResponse2.textContent = 'CPU won the game!'
+        homeButton2.classList.remove('hide');
+        options2.classList.add('hide');
+        injectHere2.classList.add('hide');
     }
 
 })
@@ -493,10 +577,16 @@ paperOption5.addEventListener('click', function () {
 
     if (player1Counter === 3) {
         actualResponse2.textContent = 'You won the game!'
+        homeButton2.classList.remove('hide');
+        options2.classList.add('hide');
+        injectHere2.classList.add('hide');
     }
 
     if (cpuCounter === 3) {
         actualResponse2.textContent = 'CPU won the game!'
+        homeButton2.classList.remove('hide');
+        options2.classList.add('hide');
+        injectHere2.classList.add('hide');
     }
 })
 
@@ -526,10 +616,16 @@ scissorsOption5.addEventListener('click', function () {
 
     if (player1Counter === 3) {
         actualResponse2.textContent = 'You won the game!'
+        homeButton2.classList.remove('hide');
+        options2.classList.add('hide');
+        injectHere2.classList.add('hide');
     }
 
     if (cpuCounter === 3) {
         actualResponse2.textContent = 'CPU won the game!'
+        homeButton2.classList.remove('hide');
+        options2.classList.add('hide');
+        injectHere2.classList.add('hide');
     }
 
 })
@@ -560,10 +656,16 @@ lizardOption5.addEventListener('click', function () {
 
     if (player1Counter === 3) {
         actualResponse2.textContent = 'You won the game!'
+        homeButton2.classList.remove('hide');
+        options2.classList.add('hide');
+        injectHere2.classList.add('hide');
     }
 
     if (cpuCounter === 3) {
         actualResponse2.textContent = 'CPU won the game!'
+        homeButton2.classList.remove('hide');
+        options2.classList.add('hide');
+        injectHere2.classList.add('hide');
     }
 })
 
@@ -593,10 +695,16 @@ spockOption5.addEventListener('click', function () {
 
     if (player1Counter === 3) {
         actualResponse2.textContent = 'You won the game!'
+        homeButton2.classList.remove('hide');
+        options2.classList.add('hide');
+        injectHere2.classList.add('hide');
     }
 
     if (cpuCounter === 3) {
         actualResponse2.textContent = 'CPU won the game!'
+        homeButton2.classList.remove('hide');
+        options2.classList.add('hide');
+        injectHere2.classList.add('hide');
     }
 })
 
@@ -634,10 +742,16 @@ rockOption7.addEventListener('click', function () {
 
     if (player1Counter === 5) {
         actualResponse3.textContent = 'You won the game!'
+        homeButton2.classList.remove('hide');
+        options3.classList.add('hide');
+        injectHere2.classList.add('hide');
     }
 
     if (cpuCounter === 5) {
         actualResponse3.textContent = 'CPU won the game!'
+        homeButton2.classList.remove('hide');
+        options3.classList.add('hide');
+        injectHere2.classList.add('hide');
     }
 
 })
@@ -671,10 +785,16 @@ paperOption7.addEventListener('click', function () {
 
     if (player1Counter === 5) {
         actualResponse3.textContent = 'You won the game!'
+        homeButton2.classList.remove('hide');
+        options3.classList.add('hide');
+        injectHere2.classList.add('hide');
     }
 
     if (cpuCounter === 5) {
         actualResponse3.textContent = 'CPU won the game!'
+        homeButton2.classList.remove('hide');
+        options3.classList.add('hide');
+        injectHere2.classList.add('hide');
     }
 })
 
@@ -704,10 +824,16 @@ scissorsOption7.addEventListener('click', function () {
 
     if (player1Counter === 5) {
         actualResponse3.textContent = 'You won the game!'
+        homeButton2.classList.remove('hide');
+        options3.classList.add('hide');
+        injectHere2.classList.add('hide');
     }
 
     if (cpuCounter === 5) {
         actualResponse3.textContent = 'CPU won the game!'
+        homeButton2.classList.remove('hide');
+        options3.classList.add('hide');
+        injectHere2.classList.add('hide');
     }
 
 })
@@ -738,10 +864,16 @@ lizardOption7.addEventListener('click', function () {
 
     if (player1Counter === 5) {
         actualResponse3.textContent = 'You won the game!'
+        homeButton2.classList.remove('hide');
+        options3.classList.add('hide');
+        injectHere2.classList.add('hide');
     }
 
     if (cpuCounter === 5) {
         actualResponse3.textContent = 'CPU won the game!'
+        homeButton2.classList.remove('hide');
+        options3.classList.add('hide');
+        injectHere2.classList.add('hide');
     }
 })
 
@@ -771,10 +903,16 @@ spockOption7.addEventListener('click', function () {
 
     if (player1Counter === 5) {
         actualResponse3.textContent = 'You won the game!'
+        homeButton2.classList.remove('hide');
+        options3.classList.add('hide');
+        injectHere2.classList.add('hide');
     }
 
     if (cpuCounter === 5) {
         actualResponse3.textContent = 'CPU won the game!'
+        homeButton2.classList.remove('hide');
+        options3.classList.add('hide');
+        injectHere2.classList.add('hide');
     }
 })
 
@@ -785,144 +923,188 @@ spockOption7.addEventListener('click', function () {
 
 
 player1RockOption1.addEventListener('click', function () {
-    
+
     player1Choice = player1RockOption1.value;
-    
+
     console.log(player1Choice);
-    if(player2Choice === ''){
+    if (player2Choice === '') {
 
-    }else{
+    } else {
 
-        
+
         if (player2Choice === 'paper' || player2Choice === 'spock') {
             counterResponseText2.textContent = player2Choice;
             counterResponseText1.textContent = player1Choice;
             actualResponse.textContent = 'Player 2 wins!';
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
         } else if (player2Choice === 'rock') {
             actualResponse.textContent = 'You tied';
             counterResponseText2.textContent = player2Choice;
             counterResponseText1.textContent = player1Choice;
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
         } else {
             counterResponseText2.textContent = player2Choice;
             counterResponseText1.textContent = player1Choice;
             actualResponse.textContent = 'Player 1 wins!'
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
         }
-       
-        
+
+
     }
 
 })
 
 player1PaperOption1.addEventListener('click', function () {
-    
+
     player1Choice = player1PaperOption1.value;
-    
-    if(player2Choice === ''){
 
-    }else{
+    if (player2Choice === '') {
 
-        
+    } else {
+
+
         if (player2Choice === 'scissors' || player2Choice === 'lizard') {
             counterResponseText2.textContent = player2Choice;
             counterResponseText1.textContent = player1Choice;
 
             actualResponse.textContent = 'Player 2 wins!';
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
         } else if (player2Choice === 'paper') {
             counterResponseText2.textContent = player2Choice;
             counterResponseText1.textContent = player1Choice;
-
             actualResponse.textContent = 'You tied';
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
         } else {
             counterResponseText2.textContent = player2Choice;
             counterResponseText1.textContent = player1Choice;
             actualResponse.textContent = 'Player 1 wins!'
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
         }
 
-     
-        
+
+
     }
 })
 
 player1ScissorsOption1.addEventListener('click', function () {
-    
+
     player1Choice = player1ScissorsOption1.value;
-    
 
-    if(player2Choice === ''){
-        
-    }else{
 
-    if (player2Choice === 'rock' || player2Choice === 'spock') {
-        counterResponseText2.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'Player 2 wins!';
-    } else if (player2Choice === 'scissors') {
-        counterResponseText2.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'You tied';
+    if (player2Choice === '') {
+
     } else {
-        counterResponseText2.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'Player 1 wins!'
+
+        if (player2Choice === 'rock' || player2Choice === 'spock') {
+            counterResponseText2.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'Player 2 wins!';
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
+        } else if (player2Choice === 'scissors') {
+            counterResponseText2.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'You tied';
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
+        } else {
+            counterResponseText2.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'Player 1 wins!'
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
+        }
+
     }
-   
-}
 })
 
 player1LizardOption1.addEventListener('click', function () {
-   
+
     player1Choice = player1LizardOption1.value;
-   
 
-    if(player2Choice === ''){
-        
-    }else{
 
-    if (player2Choice === 'rock' || player2Choice === 'scissors') {
-        counterResponseText2.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'Player 2 wins!';
-    } else if (player2Choice === 'lizard') {
-        counterResponseText2.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'You tied';
+    if (player2Choice === '') {
+
     } else {
-        counterResponseText2.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'Player 1 wins!'
-    }
-  
 
-}
+        if (player2Choice === 'rock' || player2Choice === 'scissors') {
+            counterResponseText2.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'Player 2 wins!';
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
+        } else if (player2Choice === 'lizard') {
+            counterResponseText2.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'You tied';
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
+        } else {
+            counterResponseText2.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'Player 1 wins!'
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
+        }
+
+
+    }
 
 })
 
 player1SpockOption1.addEventListener('click', function () {
     player1Choice = player1SpockOption1.value;
-    
 
-    if(player2Choice === ''){
-        
-    }else{
 
-    if (player2Choice === 'lizard' || player2Choice === 'paper') {
-        counterResponseText2.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'Player 2 wins!';
-    } else if (player2Choice === 'spock') {
-        counterResponseText2.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'You tied';
+    if (player2Choice === '') {
+
     } else {
-        counterResponseText2.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'Player 1 wins!'
-        
+
+        if (player2Choice === 'lizard' || player2Choice === 'paper') {
+            counterResponseText2.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'Player 2 wins!';
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
+        } else if (player2Choice === 'spock') {
+            counterResponseText2.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'You tied';
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
+        } else {
+            counterResponseText2.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'Player 1 wins!'
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
+
+        }
+
+
+
     }
-
-    
-
-}
 
 })
 
@@ -931,26 +1113,26 @@ player1SpockOption1.addEventListener('click', function () {
 //Player 1 event Listeners Best of 5
 
 
-player1RockOption5.addEventListener('click', function(){
+player1RockOption5.addEventListener('click', function () {
 
-    
+
     player1Choice = '';
-    
 
-    
+
+
     player1Choice = player1RockOption5.value;
-    
+
     console.log(player1Choice);
     console.log(player2Choice);
-    if(player2Choice === '' || player1Choice === ''){
+    if (player2Choice === '' || player1Choice === '') {
 
-    }else{
+    } else {
 
-        
+
         if (player2Choice === 'paper' || player2Choice === 'spock') {
             counterResponseText3.textContent = player2Choice;
             counterResponseText1.textContent = player1Choice;
-           
+
             actualResponse.textContent = 'Player 2 wins!';
         } else if (player2Choice === 'rock') {
             actualResponse.textContent = 'You tied';
@@ -967,51 +1149,57 @@ player1RockOption5.addEventListener('click', function(){
             round++;
             player1Choice = '';
             player2Choice = '';
-            
+
             console.log(player1Choice);
-        console.log(player2Choice);
+            console.log(player2Choice);
         } else if (actualResponse.textContent === 'Player 1 wins!') {
             player1Counter++;
             round++;
             player2Choice = '';
             player1Choice = '';
-          
+
             console.log(player1Choice);
-        console.log(player2Choice);
+            console.log(player2Choice);
         } else {
-    
+
         }
 
-       
-    
+
+
         counterResponseText2.textContent = player1Counter;
         counterResponseText4.textContent = player2Counter;
 
 
         if (player1Counter === 5) {
             actualResponse.textContent = 'Player 1 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
         }
-    
+
         if (player2Counter === 5) {
             actualResponse.textContent = 'Player 2 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
         }
-       
-        
+
+
     }
 })
 
-player1PaperOption5.addEventListener('click', function(){
-    
+player1PaperOption5.addEventListener('click', function () {
+
     player1Choice = player1PaperOption5.value;
 
     player1Choice = '';
 
-    
-    if(player1Choice === '' || player2Choice === ''){
 
-    }else{
+    if (player1Choice === '' || player2Choice === '') {
 
-        
+    } else {
+
+
         if (player2Choice === 'scissors' || player2Choice === 'lizard') {
             counterResponseText3.textContent = player2Choice;
             counterResponseText1.textContent = player1Choice;
@@ -1037,206 +1225,230 @@ player1PaperOption5.addEventListener('click', function(){
             player1Choice = '';
             player2Choice = '';
         } else {
-    
+
         }
-    
+
         counterResponseText2.textContent = player1Counter;
         counterResponseText4.textContent = player2Counter;
 
         if (player1Counter === 5) {
             actualResponse.textContent = 'Player 1 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
         }
-    
+
         if (player2Counter === 5) {
             actualResponse.textContent = 'Player 2 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
         }
-       
 
-     
-        
+
+
+
     }
 
 })
 
-player1ScissorsOption5.addEventListener('click', function(){
+player1ScissorsOption5.addEventListener('click', function () {
 
     player1Choice = player1ScissorsOption5.value;
 
     player1Choice = '';
 
-    
 
-    if(player2Choice === '' && player1Choice === ''){
-        
-    }else{
 
-    if (player2Choice === 'rock' || player2Choice === 'spock') {
-        counterResponseText3.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'Player 2 wins!';
-    } else if (player2Choice === 'scissors') {
-        counterResponseText3.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'You tied';
-    } else {
-        counterResponseText3.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'Player 1 wins!'
-    }
+    if (player2Choice === '' && player1Choice === '') {
 
-    if (actualResponse.textContent === 'Player 2 wins!') {
-        player2Counter++;
-        player1Choice = ' ';
-        player2Choice = ' ';
-    } else if (actualResponse.textContent === 'Player 1 wins!') {
-        player1Counter++;
-        player1Choice = ' ';
-        player2Choice = ' ';
     } else {
 
-    }
+        if (player2Choice === 'rock' || player2Choice === 'spock') {
+            counterResponseText3.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'Player 2 wins!';
+        } else if (player2Choice === 'scissors') {
+            counterResponseText3.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'You tied';
+        } else {
+            counterResponseText3.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'Player 1 wins!'
+        }
 
-    counterResponseText2.textContent = player1Counter;
-    counterResponseText4.textContent = player2Counter;
+        if (actualResponse.textContent === 'Player 2 wins!') {
+            player2Counter++;
+            player1Choice = ' ';
+            player2Choice = ' ';
+        } else if (actualResponse.textContent === 'Player 1 wins!') {
+            player1Counter++;
+            player1Choice = ' ';
+            player2Choice = ' ';
+        } else {
 
-    if (player1Counter === 5) {
-        actualResponse.textContent = 'Player 1 won the game!'
-    }
+        }
 
-    if (player2Counter === 5) {
-        actualResponse.textContent = 'Player 2 won the game!'
+        counterResponseText2.textContent = player1Counter;
+        counterResponseText4.textContent = player2Counter;
+
+        if (player1Counter === 5) {
+            actualResponse.textContent = 'Player 1 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+        if (player2Counter === 5) {
+            actualResponse.textContent = 'Player 2 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+
     }
-   
-   
-}
 })
 
-player1LizardOption5.addEventListener('click', function(){
+player1LizardOption5.addEventListener('click', function () {
 
     player1Choice = player1LizardOption5.value;
 
     player1Choice = '';
 
-   
 
-    if(player1Choice === '' || player2Choice === ''){
-        
-    }else{
 
-    if (player2Choice === 'rock' || player2Choice === 'scissors') {
-        counterResponseText3.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'Player 2 wins!';
-    } else if (player2Choice === 'lizard') {
-        counterResponseText3.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'You tied';
-    } else {
-        counterResponseText3.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'Player 1 wins!'
-    }
+    if (player1Choice === '' || player2Choice === '') {
 
-    if (actualResponse.textContent === 'Player 2 wins!') {
-        player2Counter++;
-        player1Choice = '';
-            player2Choice = '';
-    } else if (actualResponse.textContent === 'Player 1 wins!') {
-        player1Counter++;
-        player1Choice = '';
-            player2Choice = '';
     } else {
 
+        if (player2Choice === 'rock' || player2Choice === 'scissors') {
+            counterResponseText3.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'Player 2 wins!';
+        } else if (player2Choice === 'lizard') {
+            counterResponseText3.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'You tied';
+        } else {
+            counterResponseText3.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'Player 1 wins!'
+        }
+
+        if (actualResponse.textContent === 'Player 2 wins!') {
+            player2Counter++;
+            player1Choice = '';
+            player2Choice = '';
+        } else if (actualResponse.textContent === 'Player 1 wins!') {
+            player1Counter++;
+            player1Choice = '';
+            player2Choice = '';
+        } else {
+
+        }
+
+        counterResponseText2.textContent = player1Counter;
+        counterResponseText4.textContent = player2Counter;
+
+        if (player1Counter === 5) {
+            actualResponse.textContent = 'Player 1 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+        if (player2Counter === 5) {
+            actualResponse.textContent = 'Player 2 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+
+
     }
-
-    counterResponseText2.textContent = player1Counter;
-    counterResponseText4.textContent = player2Counter;
-
-    if (player1Counter === 5) {
-        actualResponse.textContent = 'Player 1 won the game!'
-    }
-
-    if (player2Counter === 5) {
-        actualResponse.textContent = 'Player 2 won the game!'
-    }
-   
-  
-
-}
 })
 
-player1SpockOption5.addEventListener('click' , function(){
+player1SpockOption5.addEventListener('click', function () {
 
     player1Choice = player1SpockOption5.value;
 
     player1Choice = '';
 
-    
 
-    if(player1Choice === '' || player2Choice === ''){
-        
-    }else{
 
-    if (player2Choice === 'lizard' || player2Choice === 'paper') {
-        counterResponseText3.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'Player 2 wins!';
-    } else if (player2Choice === 'spock') {
-        counterResponseText3.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'You tied';
-    } else {
-        counterResponseText3.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'Player 1 wins!'
-        
-    }
+    if (player1Choice === '' || player2Choice === '') {
 
-    if (actualResponse.textContent === 'Player 2 wins!') {
-        player2Counter++;
-        player1Choice = '';
-            player2Choice = '';
-    } else if (actualResponse.textContent === 'Player 1 wins!') {
-        player1Counter++;
-        player1Choice = '';
-            player2Choice = '';
     } else {
 
+        if (player2Choice === 'lizard' || player2Choice === 'paper') {
+            counterResponseText3.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'Player 2 wins!';
+        } else if (player2Choice === 'spock') {
+            counterResponseText3.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'You tied';
+        } else {
+            counterResponseText3.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'Player 1 wins!'
+
+        }
+
+        if (actualResponse.textContent === 'Player 2 wins!') {
+            player2Counter++;
+            player1Choice = '';
+            player2Choice = '';
+        } else if (actualResponse.textContent === 'Player 1 wins!') {
+            player1Counter++;
+            player1Choice = '';
+            player2Choice = '';
+        } else {
+
+        }
+
+        counterResponseText2.textContent = player1Counter;
+        counterResponseText4.textContent = player2Counter;
+
+        if (player1Counter === 5) {
+            actualResponse.textContent = 'Player 1 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+        if (player2Counter === 5) {
+            actualResponse.textContent = 'Player 2 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+
+
+
     }
-
-    counterResponseText2.textContent = player1Counter;
-    counterResponseText4.textContent = player2Counter;
-
-    if (player1Counter === 5) {
-        actualResponse.textContent = 'Player 1 won the game!'
-    }
-
-    if (player2Counter === 5) {
-        actualResponse.textContent = 'Player 2 won the game!'
-    }
-   
-
-    
-
-}
 })
 
 //---------------------------------------------------------------------------------------
 
 //Player 1 event Listeners Best of 7
 
-player1RockOption7.addEventListener('click', function(){
-    
+player1RockOption7.addEventListener('click', function () {
+
     player1Choice = player1RockOption7.value;
-    
+
     player1Choice = '';
 
     console.log(player1Choice);
-    if(player1Choice === '' || player2Choice === ''){
+    if (player1Choice === '' || player2Choice === '') {
 
-    }else{
+    } else {
 
-        
+
         if (player2Choice === 'paper' || player2Choice === 'spock') {
             counterResponseText3.textContent = player2Choice;
             counterResponseText1.textContent = player1Choice;
@@ -1260,34 +1472,40 @@ player1RockOption7.addEventListener('click', function(){
             player1Choice = '';
             player2Choice = '';
         } else {
-    
+
         }
-    
+
         counterResponseText2.textContent = player1Counter;
         counterResponseText4.textContent = player2Counter;
 
         if (player1Counter === 7) {
             actualResponse.textContent = 'Player 1 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
         }
 
         if (player2Counter === 7) {
             actualResponse.textContent = 'Player 2 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
         }
-       
-        
+
+
     }
 })
 
-player1PaperOption7.addEventListener('click', function(){
+player1PaperOption7.addEventListener('click', function () {
 
     player1Choice = player1PaperOption7.value;
     player1Choice = '';
-    
-    if(player1Choice === '' || player2Choice === ''){
 
-    }else{
+    if (player1Choice === '' || player2Choice === '') {
 
-        
+    } else {
+
+
         if (player2Choice === 'scissors' || player2Choice === 'lizard') {
             counterResponseText3.textContent = player2Choice;
             counterResponseText1.textContent = player1Choice;
@@ -1313,184 +1531,208 @@ player1PaperOption7.addEventListener('click', function(){
             player1Choice = '';
             player2Choice = '';
         } else {
-    
+
         }
-    
+
         counterResponseText2.textContent = player1Counter;
         counterResponseText4.textContent = player2Counter;
 
         if (player1Counter === 7) {
             actualResponse.textContent = 'Player 1 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
         }
-    
+
         if (player2Counter === 7) {
             actualResponse.textContent = 'Player 2 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
         }
-       
 
-     
-        
+
+
+
     }
 })
 
-player1ScissorsOption7.addEventListener('click', function(){
+player1ScissorsOption7.addEventListener('click', function () {
 
     player1Choice = player1ScissorsOption7.value;
 
     player1Choice = '';
-    
 
-    if(player1Choice === '' || player2Choice === ''){
-        
-    }else{
 
-    if (player2Choice === 'rock' || player2Choice === 'spock') {
-        counterResponseText3.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'Player 2 wins!';
-    } else if (player2Choice === 'scissors') {
-        counterResponseText3.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'You tied';
-    } else {
-        counterResponseText3.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'Player 1 wins!'
-    }
+    if (player1Choice === '' || player2Choice === '') {
 
-    if (actualResponse.textContent === 'Player 2 wins!') {
-        player2Counter++;
-        player1Choice = '';
-            player2Choice = '';
-    } else if (actualResponse.textContent === 'Player 1 wins!') {
-        player1Counter++;
-        player1Choice = '';
-            player2Choice = '';
     } else {
 
-    }
+        if (player2Choice === 'rock' || player2Choice === 'spock') {
+            counterResponseText3.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'Player 2 wins!';
+        } else if (player2Choice === 'scissors') {
+            counterResponseText3.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'You tied';
+        } else {
+            counterResponseText3.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'Player 1 wins!'
+        }
 
-    counterResponseText2.textContent = player1Counter;
-    counterResponseText4.textContent = player2Counter;
+        if (actualResponse.textContent === 'Player 2 wins!') {
+            player2Counter++;
+            player1Choice = '';
+            player2Choice = '';
+        } else if (actualResponse.textContent === 'Player 1 wins!') {
+            player1Counter++;
+            player1Choice = '';
+            player2Choice = '';
+        } else {
 
-    if (player1Counter === 7) {
-        actualResponse.textContent = 'Player 1 won the game!'
-    }
+        }
 
-    if (player2Counter === 7) {
-        actualResponse.textContent = 'Player 2 won the game!'
+        counterResponseText2.textContent = player1Counter;
+        counterResponseText4.textContent = player2Counter;
+
+        if (player1Counter === 7) {
+            actualResponse.textContent = 'Player 1 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+        if (player2Counter === 7) {
+            actualResponse.textContent = 'Player 2 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+
     }
-   
-   
-}
 })
 
-player1LizardOption7.addEventListener('click', function(){
+player1LizardOption7.addEventListener('click', function () {
 
 
     player1Choice = player1LizardOption7.value;
 
     player1Choice = '';
-   
 
-    if(player1Choice === '' || player2Choice === ''){
-        
-    }else{
 
-    if (player2Choice === 'rock' || player2Choice === 'scissors') {
-        counterResponseText3.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'Player 2 wins!';
-    } else if (player2Choice === 'lizard') {
-        counterResponseText3.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'You tied';
-    } else {
-        counterResponseText3.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'Player 1 wins!'
-    }
+    if (player1Choice === '' || player2Choice === '') {
 
-    if (actualResponse.textContent === 'Player 2 wins!') {
-        player2Counter++;
-        player1Choice = '';
-            player2Choice = '';
-    } else if (actualResponse.textContent === 'Player 1 wins!') {
-        player1Counter++;
-        player1Choice = '';
-            player2Choice = '';
     } else {
 
+        if (player2Choice === 'rock' || player2Choice === 'scissors') {
+            counterResponseText3.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'Player 2 wins!';
+        } else if (player2Choice === 'lizard') {
+            counterResponseText3.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'You tied';
+        } else {
+            counterResponseText3.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'Player 1 wins!'
+        }
+
+        if (actualResponse.textContent === 'Player 2 wins!') {
+            player2Counter++;
+            player1Choice = '';
+            player2Choice = '';
+        } else if (actualResponse.textContent === 'Player 1 wins!') {
+            player1Counter++;
+            player1Choice = '';
+            player2Choice = '';
+        } else {
+
+        }
+
+        counterResponseText2.textContent = player1Counter;
+        counterResponseText4.textContent = player2Counter;
+
+        if (player1Counter === 7) {
+            actualResponse.textContent = 'Player 1 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+        if (player2Counter === 7) {
+            actualResponse.textContent = 'Player 2 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+
+
     }
-
-    counterResponseText2.textContent = player1Counter;
-    counterResponseText4.textContent = player2Counter;
-
-    if (player1Counter === 7) {
-        actualResponse.textContent = 'Player 1 won the game!'
-    }
-
-    if (player2Counter === 7) {
-        actualResponse.textContent = 'Player 2 won the game!'
-    }
-   
-  
-
-}
 })
 
-player1SpockOption7.addEventListener('click', function(){
-    
+player1SpockOption7.addEventListener('click', function () {
+
     player1Choice = player1SpockOption7.value;
     player1Choice = '';
-    
 
-    if(player1Choice === '' || player2Choice === ''){
-        
-    }else{
 
-    if (player2Choice === 'lizard' || player2Choice === 'paper') {
-        counterResponseText3.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'Player 2 wins!';
-    } else if (player2Choice === 'spock') {
-        counterResponseText3.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'You tied';
-    } else {
-        counterResponseText3.textContent = player2Choice;
-        counterResponseText1.textContent = player1Choice;
-        actualResponse.textContent = 'Player 1 wins!'
-        
-    }
+    if (player1Choice === '' || player2Choice === '') {
 
-    if (actualResponse.textContent === 'Player 2 wins!') {
-        player2Counter++;
-        player1Choice = '';
-            player2Choice = '';
-    } else if (actualResponse.textContent === 'Player 1 wins!') {
-        player1Counter++;
-        player1Choice = '';
-            player2Choice = '';
     } else {
 
+        if (player2Choice === 'lizard' || player2Choice === 'paper') {
+            counterResponseText3.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'Player 2 wins!';
+        } else if (player2Choice === 'spock') {
+            counterResponseText3.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'You tied';
+        } else {
+            counterResponseText3.textContent = player2Choice;
+            counterResponseText1.textContent = player1Choice;
+            actualResponse.textContent = 'Player 1 wins!'
+
+        }
+
+        if (actualResponse.textContent === 'Player 2 wins!') {
+            player2Counter++;
+            player1Choice = '';
+            player2Choice = '';
+        } else if (actualResponse.textContent === 'Player 1 wins!') {
+            player1Counter++;
+            player1Choice = '';
+            player2Choice = '';
+        } else {
+
+        }
+
+        counterResponseText2.textContent = player1Counter;
+        counterResponseText4.textContent = player2Counter;
+
+        if (player1Counter === 7) {
+            actualResponse.textContent = 'Player 1 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+        if (player2Counter === 7) {
+            actualResponse.textContent = 'Player 2 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+
+
+
     }
-
-    counterResponseText2.textContent = player1Counter;
-    counterResponseText4.textContent = player2Counter;
-
-    if (player1Counter === 7) {
-        actualResponse.textContent = 'Player 1 won the game!'
-    }
-
-    if (player2Counter === 7) {
-        actualResponse.textContent = 'Player 2 won the game!'
-    }
-   
-
-    
-
-}
 })
 
 //---------------------------------------------------------------------------------------
@@ -1500,191 +1742,242 @@ player1SpockOption7.addEventListener('click', function(){
 pvpRockOption.addEventListener('click', function () {
     player2Choice = pvpRockOption.value;
 
-    if(player1Choice === ''){
-        
-    }else{
+    if (player1Choice === '') {
 
-    if (player1Choice === 'paper' || player1Choice === 'spock') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText2.textContent = player2Choice;
-        actualResponse.textContent = 'Player 1 wins!';
-    } else if (player1Choice === 'rock') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText2.textContent = player2Choice;
-        actualResponse.textContent = 'You tied';
     } else {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText2.textContent = player2Choice;
-        actualResponse.textContent = 'Player 2 wins!'
+
+        if (player1Choice === 'paper' || player1Choice === 'spock') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText2.textContent = player2Choice;
+            actualResponse.textContent = 'Player 1 wins!';
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
+        } else if (player1Choice === 'rock') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText2.textContent = player2Choice;
+            actualResponse.textContent = 'You tied';
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
+        } else {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText2.textContent = player2Choice;
+            actualResponse.textContent = 'Player 2 wins!'
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
+        }
+
     }
-    
-}
 })
 
 pvpPaperOption.addEventListener('click', function () {
     player2Choice = pvpPaperOption.value;
 
-    if(player1Choice === ''){
-        
-    }else{
-        
-    if (player1Choice === 'scissors' || player1Choice === 'lizard') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText2.textContent = player2Choice;
-        actualResponse.textContent = 'Player 1 wins!';
-    } else if (player1Choice === 'paper') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText2.textContent = player2Choice;
-        actualResponse.textContent = 'You tied';
+    if (player1Choice === '') {
+
     } else {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText2.textContent = player2Choice;
-        actualResponse.textContent = 'Player 2 wins!'
+
+        if (player1Choice === 'scissors' || player1Choice === 'lizard') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText2.textContent = player2Choice;
+            actualResponse.textContent = 'Player 1 wins!';
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
+        } else if (player1Choice === 'paper') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText2.textContent = player2Choice;
+            actualResponse.textContent = 'You tied';
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
+        } else {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText2.textContent = player2Choice;
+            actualResponse.textContent = 'Player 2 wins!'
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
+        }
+
     }
-    
-}
 })
 
 pvpScissorsOption.addEventListener('click', function () {
     player2Choice = pvpScissorsOption.value;
 
-    if(player1Choice === ''){
-        
-    }else{
-        
-    if (player1Choice === 'rock' || player1Choice === 'spock') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText2.textContent = player2Choice;
-        actualResponse.textContent = 'Player 1 wins!';
-    } else if (player1Choice === 'scissors') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText2.textContent = player2Choice;
-        actualResponse.textContent = 'You tied';
-    } else {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText2.textContent = player2Choice;
-        actualResponse.textContent = 'Player 2 wins!'
-    }
-   
+    if (player1Choice === '') {
 
-}
+    } else {
+
+        if (player1Choice === 'rock' || player1Choice === 'spock') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText2.textContent = player2Choice;
+            actualResponse.textContent = 'Player 1 wins!';
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
+        } else if (player1Choice === 'scissors') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText2.textContent = player2Choice;
+            actualResponse.textContent = 'You tied';
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
+        } else {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText2.textContent = player2Choice;
+            actualResponse.textContent = 'Player 2 wins!'
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
+        }
+
+
+    }
 })
 
 pvpLizardOption.addEventListener('click', function () {
     player2Choice = pvpLizardOption.value;
 
-    if(player1Choice === ''){
-        
-    }else{
-        
-    if (player1Choice === 'rock' || player1Choice === 'scissors') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText2.textContent = player2Choice;
-        actualResponse.textContent = 'Player 1 wins!';
-    } else if (player1Choice === 'lizard') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText2.textContent = player2Choice;
-        actualResponse.textContent = 'You tied';
-    } else {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText2.textContent = player2Choice;
-        actualResponse.textContent = 'Player 2 wins!'
-    }
- 
+    if (player1Choice === '') {
 
-}
+    } else {
+
+        if (player1Choice === 'rock' || player1Choice === 'scissors') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText2.textContent = player2Choice;
+            actualResponse.textContent = 'Player 1 wins!';
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
+        } else if (player1Choice === 'lizard') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText2.textContent = player2Choice;
+            actualResponse.textContent = 'You tied';
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
+        } else {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText2.textContent = player2Choice;
+            actualResponse.textContent = 'Player 2 wins!'
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
+        }
+
+
+    }
 })
 
 pvpSpockOption.addEventListener('click', function () {
     player2Choice = pvpSpockOption.value;
 
-    if(player1Choice === ''){
-        
-    }else{
-        
-    if (player1Choice === 'lizard' || player1Choice === 'paper') {
+    if (player1Choice === '') {
 
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText2.textContent = player2Choice;
-        actualResponse.textContent = 'Player 1 wins!';
-    } else if (player1Choice === 'spock') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText2.textContent = player2Choice;
-        actualResponse.textContent = 'You tied';
     } else {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText2.textContent = player2Choice;
-        actualResponse.textContent = 'Player 2 wins!'
-    }
-    
 
-}
+        if (player1Choice === 'lizard' || player1Choice === 'paper') {
+
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText2.textContent = player2Choice;
+            actualResponse.textContent = 'Player 1 wins!';
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
+        } else if (player1Choice === 'spock') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText2.textContent = player2Choice;
+            actualResponse.textContent = 'You tied';
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
+        } else {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText2.textContent = player2Choice;
+            actualResponse.textContent = 'Player 2 wins!'
+            homeButton2.classList.remove('hide');
+            player1Options1.classList.add('hide');
+            player2Options1.classList.add('hide');
+        }
+
+
+    }
 })
 
 //---------------------------------------------------------------------------------------
 
 //Player 2 Options Best of 5
 
-pvpRockOption5.addEventListener('click', function(){
-    
+pvpRockOption5.addEventListener('click', function () {
+
     player2Choice = '';
 
     player2Choice = pvpRockOption5.value;
 
 
 
-    if(player1Choice === '' || player2Choice === ''){
-        
-    }else{
+    if (player1Choice === '' || player2Choice === '') {
 
-    if (player1Choice === 'paper' || player1Choice === 'spock') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'Player 1 wins!';
-    } else if (player1Choice === 'rock') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'You tied';
-    } else {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'Player 2 wins!'
-    }
-
-    if (actualResponse.textContent === 'Player 2 wins!') {
-        player2Counter++;
-        player2Choice = '';
-        player1Choice = '';
-        
-    } else if (actualResponse.textContent === 'Player 1 wins!') {
-        player1Counter++;
-        player2Choice = '';
-        player1Choice = '';
-         
     } else {
 
+        if (player1Choice === 'paper' || player1Choice === 'spock') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'Player 1 wins!';
+        } else if (player1Choice === 'rock') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'You tied';
+        } else {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'Player 2 wins!'
+        }
+
+        if (actualResponse.textContent === 'Player 2 wins!') {
+            player2Counter++;
+            player2Choice = '';
+            player1Choice = '';
+
+        } else if (actualResponse.textContent === 'Player 1 wins!') {
+            player1Counter++;
+            player2Choice = '';
+            player1Choice = '';
+
+        } else {
+
+        }
+
+        counterResponseText2.textContent = player1Counter;
+        counterResponseText4.textContent = player2Counter;
+
+        if (player1Counter === 5) {
+            actualResponse.textContent = 'Player 1 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+        if (player2Counter === 5) {
+            actualResponse.textContent = 'Player 2 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+
     }
 
-    counterResponseText2.textContent = player1Counter;
-    counterResponseText4.textContent = player2Counter;
 
-    if (player1Counter === 5) {
-        actualResponse.textContent = 'Player 1 won the game!'
-    }
-
-    if (player2Counter === 5) {
-        actualResponse.textContent = 'Player 2 won the game!'
-    }
-   
-    
-}
-
-    
 })
 
-pvpPaperOption5.addEventListener('click', function(){
+pvpPaperOption5.addEventListener('click', function () {
 
-    
+
     player2Choice = '';
 
     player2Choice = pvpPaperOption5.value;
@@ -1692,219 +1985,243 @@ pvpPaperOption5.addEventListener('click', function(){
     console.log(player1Choice);
     console.log(player2Choice);
 
-    if(player1Choice === '' || player2Choice === ''){
-        
-    }else{
-        
-    if (player1Choice === 'scissors' || player1Choice === 'lizard') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        
-        actualResponse.textContent = 'Player 1 wins!';
-    } else if (player1Choice === 'paper') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
+    if (player1Choice === '' || player2Choice === '') {
 
-
-        actualResponse.textContent = 'You tied';
-    } else {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'Player 2 wins!'
-    }
-
-    if (actualResponse.textContent === 'Player 2 wins!') {
-        player2Counter++;
-        round++;
-        player2Choice = '';
-        player1Choice = '';
-        console.log(player1Choice);
-        console.log(player2Choice);
-    } else if (actualResponse.textContent === 'Player 1 wins!') {
-        player1Counter++;
-        round++;
-       player1Choice = '';
-       player2Choice = '';
-        console.log(player1Choice);
-        console.log(player2Choice);
     } else {
 
+        if (player1Choice === 'scissors' || player1Choice === 'lizard') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+
+            actualResponse.textContent = 'Player 1 wins!';
+        } else if (player1Choice === 'paper') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+
+
+            actualResponse.textContent = 'You tied';
+        } else {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'Player 2 wins!'
+        }
+
+        if (actualResponse.textContent === 'Player 2 wins!') {
+            player2Counter++;
+            round++;
+            player2Choice = '';
+            player1Choice = '';
+            console.log(player1Choice);
+            console.log(player2Choice);
+        } else if (actualResponse.textContent === 'Player 1 wins!') {
+            player1Counter++;
+            round++;
+            player1Choice = '';
+            player2Choice = '';
+            console.log(player1Choice);
+            console.log(player2Choice);
+        } else {
+
+        }
+
+
+
+
+        counterResponseText2.textContent = player1Counter;
+        counterResponseText4.textContent = player2Counter;
+
+
+        if (player1Counter === 5) {
+            actualResponse.textContent = 'Player 1 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+        if (player2Counter === 5) {
+            actualResponse.textContent = 'Player 2 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+
     }
-
-    
-
-
-    counterResponseText2.textContent = player1Counter;
-    counterResponseText4.textContent = player2Counter;
-
-
-    if (player1Counter === 5) {
-        actualResponse.textContent = 'Player 1 won the game!'
-    }
-
-    if (player2Counter === 5) {
-        actualResponse.textContent = 'Player 2 won the game!'
-    }
-   
-    
-}
 
 })
 
-pvpScissorsOption5.addEventListener('click', function(){
+pvpScissorsOption5.addEventListener('click', function () {
     player2Choice = pvpScissorsOption5.value;
 
     player2Choice = '';
 
-    if(player1Choice === '' || player2Choice === ''){
-        
-    }else{
-        
-    if (player1Choice === 'rock' || player1Choice === 'spock') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'Player 1 wins!';
-    } else if (player1Choice === 'scissors') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'You tied';
-    } else {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'Player 2 wins!'
-    }
+    if (player1Choice === '' || player2Choice === '') {
 
-    if (actualResponse.textContent === 'Player 2 wins!') {
-        player2Counter++;
-        player2Choice = '';
-        player1Choice = '';
-    } else if (actualResponse.textContent === 'Player 1 wins!') {
-        player1Counter++;
-        player2Choice = '';
-        player1Choice = '';
     } else {
 
+        if (player1Choice === 'rock' || player1Choice === 'spock') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'Player 1 wins!';
+        } else if (player1Choice === 'scissors') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'You tied';
+        } else {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'Player 2 wins!'
+        }
+
+        if (actualResponse.textContent === 'Player 2 wins!') {
+            player2Counter++;
+            player2Choice = '';
+            player1Choice = '';
+        } else if (actualResponse.textContent === 'Player 1 wins!') {
+            player1Counter++;
+            player2Choice = '';
+            player1Choice = '';
+        } else {
+
+        }
+
+        counterResponseText2.textContent = player1Counter;
+        counterResponseText4.textContent = player2Counter;
+
+        if (player1Counter === 5) {
+            actualResponse.textContent = 'Player 1 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+        if (player2Counter === 5) {
+            actualResponse.textContent = 'Player 2 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+
+
     }
-
-    counterResponseText2.textContent = player1Counter;
-    counterResponseText4.textContent = player2Counter;
-
-    if (player1Counter === 5) {
-        actualResponse.textContent = 'Player 1 won the game!'
-    }
-
-    if (player2Counter === 5) {
-        actualResponse.textContent = 'Player 2 won the game!'
-    }
-   
-   
-
-}
 
 })
 
-pvpLizardOption5.addEventListener('click', function(){
+pvpLizardOption5.addEventListener('click', function () {
     player2Choice = pvpLizardOption5.value;
 
     player2Choice = '';
 
-    if(player1Choice === '' || player2Choice === ''){
-        
-    }else{
-        
-    if (player1Choice === 'rock' || player1Choice === 'scissors') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'Player 1 wins!';
-    } else if (player1Choice === 'lizard') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'You tied';
-    } else {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'Player 2 wins!'
-    }
+    if (player1Choice === '' || player2Choice === '') {
 
-    if (actualResponse.textContent === 'Player 2 wins!') {
-        player2Counter++;
-        player2Choice = '';
-        player1Choice = '';
-    } else if (actualResponse.textContent === 'Player 1 wins!') {
-        player1Counter++;
-        player2Choice = '';
-        player1Choice = '';
     } else {
 
-    }
+        if (player1Choice === 'rock' || player1Choice === 'scissors') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'Player 1 wins!';
+        } else if (player1Choice === 'lizard') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'You tied';
+        } else {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'Player 2 wins!'
+        }
 
-    counterResponseText2.textContent = player1Counter;
-    counterResponseText4.textContent = player2Counter;
-    
-    if (player1Counter === 5) {
-        actualResponse.textContent = 'Player 1 won the game!'
-    }
+        if (actualResponse.textContent === 'Player 2 wins!') {
+            player2Counter++;
+            player2Choice = '';
+            player1Choice = '';
+        } else if (actualResponse.textContent === 'Player 1 wins!') {
+            player1Counter++;
+            player2Choice = '';
+            player1Choice = '';
+        } else {
 
-    if (player2Counter === 5) {
-        actualResponse.textContent = 'Player 2 won the game!'
-    }
-   
- 
+        }
 
-}
+        counterResponseText2.textContent = player1Counter;
+        counterResponseText4.textContent = player2Counter;
+
+        if (player1Counter === 5) {
+            actualResponse.textContent = 'Player 1 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+        if (player2Counter === 5) {
+            actualResponse.textContent = 'Player 2 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+
+
+    }
 
 })
 
-pvpSpockOption5.addEventListener('click', function(){
+pvpSpockOption5.addEventListener('click', function () {
     player2Choice = pvpSpockOption5.value;
 
     player2Choice = '';
 
-    if(player1Choice === '' || player2Choice === ''){
-        
-    }else{
-        
-    if (player1Choice === 'lizard' || player1Choice === 'paper') {
+    if (player1Choice === '' || player2Choice === '') {
 
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'Player 1 wins!';
-    } else if (player1Choice === 'spock') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'You tied';
-    } else {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'Player 2 wins!'
-    }
-
-    if (actualResponse.textContent === 'Player 2 wins!') {
-        player2Counter++;
-        player2Choice = '';
-        player1Choice = '';
-    } else if (actualResponse.textContent === 'Player 1 wins!') {
-        player1Counter++;
-        player2Choice = '';
-        player1Choice = '';
     } else {
 
+        if (player1Choice === 'lizard' || player1Choice === 'paper') {
+
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'Player 1 wins!';
+        } else if (player1Choice === 'spock') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'You tied';
+        } else {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'Player 2 wins!'
+        }
+
+        if (actualResponse.textContent === 'Player 2 wins!') {
+            player2Counter++;
+            player2Choice = '';
+            player1Choice = '';
+        } else if (actualResponse.textContent === 'Player 1 wins!') {
+            player1Counter++;
+            player2Choice = '';
+            player1Choice = '';
+        } else {
+
+        }
+
+        counterResponseText2.textContent = player1Counter;
+        counterResponseText4.textContent = player2Counter;
+
+        if (player1Counter === 5) {
+            actualResponse.textContent = 'Player 1 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+        if (player2Counter === 5) {
+            actualResponse.textContent = 'Player 2 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+
+
     }
-
-    counterResponseText2.textContent = player1Counter;
-    counterResponseText4.textContent = player2Counter;
-
-    if (player1Counter === 5) {
-        actualResponse.textContent = 'Player 1 won the game!'
-    }
-
-    if (player2Counter === 5) {
-        actualResponse.textContent = 'Player 2 won the game!'
-    }
-   
-    
-
-}
 
 })
 
@@ -1912,262 +2229,293 @@ pvpSpockOption5.addEventListener('click', function(){
 
 //Player 2 Options Best of 7
 
-pvpRockOption7.addEventListener('click', function(){
+pvpRockOption7.addEventListener('click', function () {
 
     player2Choice = pvpRockOption7.value;
     player2Choice = '';
 
-    if(player1Choice === '' || player2Choice === ''){
-        
-    }else{
+    if (player1Choice === '' || player2Choice === '') {
 
-    if (player1Choice === 'paper' || player1Choice === 'spock') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'Player 1 wins!';
-    } else if (player1Choice === 'rock') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'You tied';
-    } else {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'Player 2 wins!'
-    }
-
-    if (actualResponse.textContent === 'Player 2 wins!') {
-        player2Counter++;
-        player2Choice = '';
-        player1Choice = '';
-    } else if (actualResponse.textContent === 'Player 1 wins!') {
-        player1Counter++;
-        player2Choice = '';
-        player1Choice = '';
     } else {
 
-    }
+        if (player1Choice === 'paper' || player1Choice === 'spock') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'Player 1 wins!';
+        } else if (player1Choice === 'rock') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'You tied';
+        } else {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'Player 2 wins!'
+        }
 
-    counterResponseText2.textContent = player1Counter;
-    counterResponseText4.textContent = player2Counter;
+        if (actualResponse.textContent === 'Player 2 wins!') {
+            player2Counter++;
+            player2Choice = '';
+            player1Choice = '';
+        } else if (actualResponse.textContent === 'Player 1 wins!') {
+            player1Counter++;
+            player2Choice = '';
+            player1Choice = '';
+        } else {
 
-    if (player1Counter === 7) {
-        actualResponse.textContent = 'Player 1 won the game!'
-    }
+        }
 
-    if (player2Counter === 7) {
-        actualResponse.textContent = 'Player 2 won the game!'
+        counterResponseText2.textContent = player1Counter;
+        counterResponseText4.textContent = player2Counter;
+
+        if (player1Counter === 7) {
+            actualResponse.textContent = 'Player 1 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+        if (player2Counter === 7) {
+            actualResponse.textContent = 'Player 2 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+
     }
-   
-    
-}
 })
 
-pvpPaperOption7.addEventListener('click', function(){
+pvpPaperOption7.addEventListener('click', function () {
 
     player2Choice = pvpPaperOption7.value;
 
     player2Choice = '';
 
-    if(player1Choice === '' || player2Choice === ''){
-        
-    }else{
-        
-    if (player1Choice === 'scissors' || player1Choice === 'lizard') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'Player 1 wins!';
-    } else if (player1Choice === 'paper') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'You tied';
-    } else {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'Player 2 wins!'
-    }
+    if (player1Choice === '' || player2Choice === '') {
 
-    if (actualResponse.textContent === 'Player 2 wins!') {
-        player2Counter++;
-        player2Choice = '';
-        player1Choice = '';
-    } else if (actualResponse.textContent === 'Player 1 wins!') {
-        player1Counter++;
-        player2Choice = '';
-        player1Choice = '';
     } else {
 
-    }
+        if (player1Choice === 'scissors' || player1Choice === 'lizard') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'Player 1 wins!';
+        } else if (player1Choice === 'paper') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'You tied';
+        } else {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'Player 2 wins!'
+        }
 
-    counterResponseText2.textContent = player1Counter;
-    counterResponseText4.textContent = player2Counter;
+        if (actualResponse.textContent === 'Player 2 wins!') {
+            player2Counter++;
+            player2Choice = '';
+            player1Choice = '';
+        } else if (actualResponse.textContent === 'Player 1 wins!') {
+            player1Counter++;
+            player2Choice = '';
+            player1Choice = '';
+        } else {
 
-    if (player1Counter === 7) {
-        actualResponse.textContent = 'Player 1 won the game!'
-    }
+        }
 
-    if (player2Counter === 7) {
-        actualResponse.textContent = 'Player 2 won the game!'
+        counterResponseText2.textContent = player1Counter;
+        counterResponseText4.textContent = player2Counter;
+
+        if (player1Counter === 7) {
+            actualResponse.textContent = 'Player 1 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+        if (player2Counter === 7) {
+            actualResponse.textContent = 'Player 2 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+
     }
-   
-    
-}
 })
 
-pvpScissorsOption7.addEventListener('click', function(){
+pvpScissorsOption7.addEventListener('click', function () {
 
     player2Choice = pvpScissorsOption7.value;
 
     player2Choice = '';
 
-    if(player1Choice === '' || player2Choice === ''){
-        
-    }else{
-        
-    if (player1Choice === 'rock' || player1Choice === 'spock') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'Player 1 wins!';
-    } else if (player1Choice === 'scissors') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'You tied';
-    } else {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'Player 2 wins!'
-    }
+    if (player1Choice === '' || player2Choice === '') {
 
-    if (actualResponse.textContent === 'Player 2 wins!') {
-        player2Counter++;
-        player2Choice = '';
-        player1Choice = '';
-    } else if (actualResponse.textContent === 'Player 1 wins!') {
-        player1Counter++;
-        player2Choice = '';
-        player1Choice = '';
     } else {
 
+        if (player1Choice === 'rock' || player1Choice === 'spock') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'Player 1 wins!';
+        } else if (player1Choice === 'scissors') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'You tied';
+        } else {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'Player 2 wins!'
+        }
+
+        if (actualResponse.textContent === 'Player 2 wins!') {
+            player2Counter++;
+            player2Choice = '';
+            player1Choice = '';
+        } else if (actualResponse.textContent === 'Player 1 wins!') {
+            player1Counter++;
+            player2Choice = '';
+            player1Choice = '';
+        } else {
+
+        }
+
+        counterResponseText2.textContent = player1Counter;
+        counterResponseText4.textContent = player2Counter;
+
+        if (player1Counter === 7) {
+            actualResponse.textContent = 'Player 1 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+        if (player2Counter === 7) {
+            actualResponse.textContent = 'Player 2 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+
+
     }
-
-    counterResponseText2.textContent = player1Counter;
-    counterResponseText4.textContent = player2Counter;
-
-    if (player1Counter === 7) {
-        actualResponse.textContent = 'Player 1 won the game!'
-    }
-
-    if (player2Counter === 7) {
-        actualResponse.textContent = 'Player 2 won the game!'
-    }
-   
-   
-
-}
 })
 
-pvpLizardOption7.addEventListener('click', function(){
+pvpLizardOption7.addEventListener('click', function () {
     player2Choice = pvpLizardOption7.value;
 
 
     player2Choice = '';
 
-    if(player1Choice === '' || player2Choice === ''){
-        
-    }else{
-        
-    if (player1Choice === 'rock' || player1Choice === 'scissors') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'Player 1 wins!';
-    } else if (player1Choice === 'lizard') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'You tied';
-    } else {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'Player 2 wins!'
-    }
+    if (player1Choice === '' || player2Choice === '') {
 
-    if (actualResponse.textContent === 'Player 2 wins!') {
-        player2Counter++;
-        player2Choice = '';
-        player1Choice = '';
-    } else if (actualResponse.textContent === 'Player 1 wins!') {
-        player1Counter++;
-        player2Choice = '';
-        player1Choice = '';
     } else {
 
-    }
+        if (player1Choice === 'rock' || player1Choice === 'scissors') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'Player 1 wins!';
+        } else if (player1Choice === 'lizard') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'You tied';
+        } else {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'Player 2 wins!'
+        }
 
-    counterResponseText2.textContent = player1Counter;
-    counterResponseText4.textContent = player2Counter;
-    
-    if (player1Counter === 7) {
-        actualResponse.textContent = 'Player 1 won the game!'
-    }
+        if (actualResponse.textContent === 'Player 2 wins!') {
+            player2Counter++;
+            player2Choice = '';
+            player1Choice = '';
+        } else if (actualResponse.textContent === 'Player 1 wins!') {
+            player1Counter++;
+            player2Choice = '';
+            player1Choice = '';
+        } else {
 
-    if (player2Counter === 7) {
-        actualResponse.textContent = 'Player 2 won the game!'
-    }
-   
- 
+        }
 
-}
+        counterResponseText2.textContent = player1Counter;
+        counterResponseText4.textContent = player2Counter;
+
+        if (player1Counter === 7) {
+            actualResponse.textContent = 'Player 1 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+        if (player2Counter === 7) {
+            actualResponse.textContent = 'Player 2 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+
+
+    }
 })
 
-pvpSpockOption7.addEventListener('click', function(){
+pvpSpockOption7.addEventListener('click', function () {
 
     player2Choice = pvpSpockOption7.value;
 
     player2Choice = '';
 
-    if(player1Choice === '' || player2Choice === ''){
-        
-    }else{
-        
-    if (player1Choice === 'lizard' || player1Choice === 'paper') {
+    if (player1Choice === '' || player2Choice === '') {
 
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'Player 1 wins!';
-    } else if (player1Choice === 'spock') {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'You tied';
-    } else {
-        counterResponseText1.textContent = player1Choice;
-        counterResponseText3.textContent = player2Choice;
-        actualResponse.textContent = 'Player 2 wins!'
-    }
-
-    if (actualResponse.textContent === 'Player 2 wins!') {
-        player2Counter++;
-        player2Choice = '';
-        player1Choice = '';
-    } else if (actualResponse.textContent === 'Player 1 wins!') {
-        player1Counter++;
-        player2Choice = '';
-        player1Choice = '';
     } else {
 
+        if (player1Choice === 'lizard' || player1Choice === 'paper') {
+
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'Player 1 wins!';
+        } else if (player1Choice === 'spock') {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'You tied';
+        } else {
+            counterResponseText1.textContent = player1Choice;
+            counterResponseText3.textContent = player2Choice;
+            actualResponse.textContent = 'Player 2 wins!'
+        }
+
+        if (actualResponse.textContent === 'Player 2 wins!') {
+            player2Counter++;
+            player2Choice = '';
+            player1Choice = '';
+        } else if (actualResponse.textContent === 'Player 1 wins!') {
+            player1Counter++;
+            player2Choice = '';
+            player1Choice = '';
+        } else {
+
+        }
+
+        counterResponseText2.textContent = player1Counter;
+        counterResponseText4.textContent = player2Counter;
+
+        if (player1Counter === 7) {
+            actualResponse.textContent = 'Player 1 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+
+        }
+
+        if (player2Counter === 7) {
+            actualResponse.textContent = 'Player 2 won the game!'
+            homeButton2.classList.remove('hide');
+            player1Options5.classList.add('hide');
+            player2Options5.classList.add('hide');
+        }
+
+
+
     }
-
-    counterResponseText2.textContent = player1Counter;
-    counterResponseText4.textContent = player2Counter;
-
-    if (player1Counter === 7) {
-        actualResponse.textContent = 'Player 1 won the game!'
-    }
-
-    if (player2Counter === 7) {
-        actualResponse.textContent = 'Player 2 won the game!'
-    }
-   
-    
-
-}
 })
 
 

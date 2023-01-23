@@ -233,14 +233,21 @@
 
             <!-- Best of 5 vs CPU -->
             <div class="row text-center alignCenter">
-                <div id="bestOf5BtnDiv" class="col-6 ">
+                <div id="bestOf5BtnDiv" class="col">
                     <button id='bestOf5Btn' type="button" class="btn">
                         <h4 class="boxBackground1">Best of 5 VS CPU</h4>
                     </button>
 
 
                 </div>
-                <div id="PvpBtn2Div" class="col-6 alignCenter">
+
+                <!-- Home button 2 -->
+                <div class="col alignCenter"><button id="homeButton2" class="boxBackground1 hide">
+                    <h1>Home</h1>
+                </button></div>
+
+                <!-- 2 player best of 5 -->
+                <div id="PvpBtn2Div" class="col alignCenter">
                     <button id="PvpBtn2" type="button" class="btn hide">
                         <h4 class="boxBackground1">2 Player - Best of 5</h4>
                     </button>
@@ -283,6 +290,7 @@
                     <div id="counterResponse2" class="col hide boxBackground2">
                         <div id="counterResponseText2" class="hide alignCenter"></div>
                     </div>
+                    
                     <div id="counterResponse3" class="col hide boxBackground2">
                         <div id="counterResponseText3" class="hide alignCenter"></div>
                     </div>
@@ -290,6 +298,14 @@
                         <div id="counterResponseText4" class="hide alignCenter"></div>
                     </div>
 
+                </div>
+                <div class="row">
+                    <div id="player1Text" class="col-6 alignCenter hide boxBackground2">
+                        <h1>Player 1</h1>
+                    </div>
+                    <div id="player2Text" class="col-6 alignCenter hide boxBackground2">
+                        <h1>Player 2</h1>
+                    </div>
                 </div>
             </div>
         </div>

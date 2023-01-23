@@ -78,3 +78,21 @@
     display: flex;
     justify-content: flex-start;
 }
+
+.test{
+    display: flex;
+    justify-content: space-between;
+}
+
+.generalPadding{
+    padding: 20px;
+}
+
+.leftPadding{
+    padding-left: 15px;
+}
+
+.rightPadding{
+
+    padding-right: 15px;
+}
